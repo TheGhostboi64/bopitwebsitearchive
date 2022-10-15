@@ -1,0 +1,15 @@
+td {font-family: arial, sans-serif; font-size: 12px; color: 000000;}
+
+.question {
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight : bold;
+}
+
+.answer {
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight : bold;
+}

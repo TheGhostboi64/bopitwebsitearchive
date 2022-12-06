@@ -146,7 +146,12 @@
     </div>
 </div>
 
-    <embed src="swf/Bopit.swf"></embed>
+    <script type="text/javascript" language="javascript">
+    var so = new SWFObject( "Bopit.swf", "flashID", "100%", "100%", "8", "#F4513E");
+    so.addParam( "scale", "noscale" );
+	so.addParam( "showMenu", "false" );
+    so.write( "FlashBopIt" );
+    </script>
         
     
     

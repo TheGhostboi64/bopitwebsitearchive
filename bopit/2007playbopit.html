@@ -146,22 +146,30 @@
         
     </div>
 </div>
-
-    <script type="text/javascript" language="javascript">
-    var so = new SWFObject( "Bopit.swf", "flashID", "100%", "100%", "8", "#F4513E");
-    so.addParam( "scale", "noscale" );
-	so.addParam( "showMenu", "false" );
-    so.write( "FlashBopIt" );
-    </script>
-	<noscript></noscript>
-        
-    
-    
-    
-    
-
-    
-    
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKA24yqDgK94cDBCQLA3NWsCGcZiXjUIup+L4DlJpWyveg+Ssqw"/></form>
+<div id="container">
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+"autoplay": "auto",
+"backgroundColor": #F4513E,
+ "quality": "high",
+"scale": "noscale",
+"menu": false,
+"upgradeToHttps": window.location.protocol === "https:",
+};
+</script>
+<script>
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("Bopit.swf");
+player.style.width = "100%"; 
+player.style.height = "100%";
+    });
+</script>
+    </div>
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKA24yqDgK94cDBCQLA3NWsCGcZiXjUIup+L4DlJpWyveg+Ssqw"/></form>
 </body>
 </html>

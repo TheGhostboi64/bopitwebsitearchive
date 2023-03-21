@@ -6,7 +6,7 @@
 
 </head>
 <body>
-<form name="aspnetForm" method="post" action="https://shop.hasbro.com/en-us/search?search=" id="aspnetForm" style="height: 97%;">
+<form name="aspnetForm" method="post" action="index.aspx" id="aspnetForm" style="height: 97%;">
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwMDUyNjYzMjgPZBYCZg9kFgICAw9kFgICAQ9kFgICAw8PZBYCHgdvbmNsaWNrBQh2YWx1ZT0nJ2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFGGN0bDAwJFRvcEJhciRBdG9telN1Ym1pdAbhkhWDQuMTQt7sABrhlb3drhTP"/>
 
     
@@ -139,26 +139,39 @@
             
         </div>
         <div id="BopItOz">
-            <a id="ctl00_TopBar_lnkBopItOz" title="Click to go to Australian Bop It site" href="https://web.archive.org/web/20071015061230/http://www.bopit.com.au/" target="_blank"><img id="ctl00_TopBar_imgFlag" title="Click to go to Australian Bop It site" src="/bopitwebsitearchive/bopit/images/AussieFlag.gif" alt="Australian flag" border="0"/></a>
+            <a id="ctl00_TopBar_lnkBopItOz" title="Click to go to Australian Bop It site" href="https://web.archive.org/web/20071015061230/http://www.bopit.com.au/" target="_blank"><img id="ctl00_TopBar_imgFlag" title="Click to go to Australian Bop It site" src="/web/20071015061230im_/http://www.playbopit.com/images/common/AussieFlag.gif" alt="Australian flag" border="0"/></a>
         </div>
         
     </div>
 </div>
-	<div style="height: 100%;">
-		
-<div id="FlashBopIt" style="height:100%;">
-        Flash is not installed in your browser. Therefore, display alternative content.
-    </div>
-    <script>
-    var so = new SWFObject( "Bopit.swf", "flashID", "100%", "100%", "8", "#F4513E");
-    so.addParam( "scale", "noscale" );
-	so.addParam( "showMenu", "false" );
-    so.write( "FlashBopIt" );
-    </script>
-    <noscript></noscript>
+<div style="height: 100%;">
+        
     
-
+    <div id="FlashBopIt" style="height:100%;">
+	<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+"autoplay": "off",
+"backgroundColor": null,
+"scale": "noscale",
+"menu": false,
+"showSwfDownload": false,
+"upgradeToHttps": window.location.protocol === "https:",
+};
+</script>
+<script>
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("FlashBopIt");
+        container.appendChild(player);
+        player.load("swf/Bopit.swf");
+player.style.width = "100%"; 
+player.style.height = "100%";
+    });
+</script>
     </div>
+	</div>
 	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKA24yqDgK94cDBCQLA3NWsCGcZiXjUIup+L4DlJpWyveg+Ssqw"/></form>
 </body>
 </html>
